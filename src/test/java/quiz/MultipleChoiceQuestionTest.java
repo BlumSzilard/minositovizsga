@@ -1,4 +1,3 @@
-/*
 package quiz;
 
 import org.junit.jupiter.api.Test;
@@ -28,7 +27,7 @@ class MultipleChoiceQuestionTest {
     @Test
     void testCreateMultipleChoiceQuestionWithWrongCorrectAnswers() {
         CorrectAnswersMismatchException came = assertThrows(CorrectAnswersMismatchException.class,
-                () -> new MultipleChoiceQuestion("(x)^2=1", List.of("-1", "1", "2", "3"), List.of("-1", "5"), Level.HARD));
+                () -> new MultipleChoiceQuestion("(x)^2=1", List.of("-1", "1", "2", "3"), List.of("-1", "5"), Level.HIGH));
 
         assertEquals("Answers must contain all correct answers!", came.getMessage());
     }
@@ -56,4 +55,4 @@ class MultipleChoiceQuestionTest {
         assertEquals("Answers are not in options!", iae.getMessage());
     }
 
-}*/
+}
