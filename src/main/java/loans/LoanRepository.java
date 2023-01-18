@@ -42,5 +42,10 @@ public class LoanRepository {
         jdbcTemplate.update(sql);
     }
 
+    public void updateDebtWithPayment(long id, int amount){
+        String sql = "UPDATE loans SET debt = debt - ? WHERE id = ?";
+        jdbcTemplate.update(sql, amount, id);
+    }
+
 
 }

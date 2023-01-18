@@ -59,15 +59,6 @@ class LoanRepositoryTest {
         assertEquals(1_363_700, loan2.getDebt());
     }
 
-//    @Test
-//    void testUpdateDebtWithPayment() {
-//        long id = repository.insertLoan("John Doe", 1_200_000, 5.1);
-//        long id2 = repository.insertLoan("John Doe", 1_300_000, 4.9);
-//
-//        repository.updateDebtWithPayment(id, 200_000);
-//
-//        assertEquals(1_000_000, repository.findLoanById(id).getDebt());
-//        assertEquals(1_300_000, repository.findLoanById(id2).getDebt());
-//    }
+
 
 }
