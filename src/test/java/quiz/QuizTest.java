@@ -1,4 +1,3 @@
-/*
 package quiz;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +15,7 @@ class QuizTest {
     @BeforeEach
     void init() {
         quiz.addQuestion(new OneWordQuestion("2+2=?", "4", Level.MEDIUM));
-        quiz.addQuestion(new MultipleChoiceQuestion("3-2=x", List.of("-1", "1", "2", "3"), List.of("1"), Level.HARD));
+        quiz.addQuestion(new MultipleChoiceQuestion("3-2=x", List.of("-1", "1", "2", "3"), List.of("1"), Level.HIGH));
         quiz.addQuestion(new OneWordQuestion("2+3=?", "5", Level.EASY));
         quiz.addQuestion(new MultipleChoiceQuestion("sqrt(x)=2", List.of("-1", "4", "2", "3"), List.of("4"), Level.MEDIUM));
     }
@@ -41,9 +40,9 @@ class QuizTest {
     void testGroupByLevel() {
         Map<Level, Integer> result = quiz.groupByLevel();
 
-        assertEquals(1, result.get(Level.HARD));
+        assertEquals(1, result.get(Level.HIGH));
         assertEquals(2, result.get(Level.MEDIUM));
         assertEquals(1, result.get(Level.EASY));
     }
 
-}*/
+}
