@@ -1,4 +1,3 @@
-/*
 package quiz;
 
 import org.junit.jupiter.api.Test;
@@ -9,10 +8,10 @@ class OneWordQuestionTest {
 
     @Test
     void testCreateOneWordQuestion() {
-        Question question = new OneWordQuestion("2+2=?", "4", Level.HARD);
+        Question question = new OneWordQuestion("2+2=?", "4", Level.HIGH);
 
         assertEquals("2+2=?", question.getQuestion());
-        assertEquals(Level.HARD, question.getLevel());
+        assertEquals(Level.HIGH, question.getLevel());
     }
 
     @Test
@@ -28,7 +27,7 @@ class OneWordQuestionTest {
 
     @Test
     void testCalculatePointWithWrongAmount() {
-        Question question = new OneWordQuestion("2+2=?", "4", Level.HARD);
+        Question question = new OneWordQuestion("2+2=?", "4", Level.HIGH);
 
         IllegalArgumentException iae = assertThrows(IllegalArgumentException.class,
                 () -> question.calculatePoints("4", "3"));
@@ -36,4 +35,4 @@ class OneWordQuestionTest {
         assertEquals("Only one answer acceptable!", iae.getMessage());
     }
 
-}*/
+}
