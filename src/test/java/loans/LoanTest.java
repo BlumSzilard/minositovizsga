@@ -1,4 +1,3 @@
-/*
 package loans;
 
 import org.junit.jupiter.api.Test;
@@ -17,4 +16,4 @@ class LoanTest {
         assertEquals(5.1, loan.getInterest());
     }
 
-}*/
+}
