@@ -1,4 +1,3 @@
-/*
 package loans;
 
 import org.flywaydb.core.Flyway;
@@ -20,9 +19,9 @@ class LoanServiceTest {
     void init() {
         MariaDbDataSource dataSource = new MariaDbDataSource();
         try {
-            dataSource.setUrl("jdbc:mariadb://localhost:3306/exam-test?useUnicode=true");
-            dataSource.setUserName("root");
-            dataSource.setPassword("training");
+            dataSource.setUrl("jdbc:mariadb://localhost:3306/labs?useUnicode=true");
+            dataSource.setUserName("labs");
+            dataSource.setPassword("OraEtLabora");
         } catch (SQLException sqle) {
             throw new IllegalStateException("Cannot reach DataBase!", sqle);
         }
@@ -49,4 +48,4 @@ class LoanServiceTest {
         assertEquals(0, repository.findLoanById(id2).getDebt());
     }
 
-}*/
+}
