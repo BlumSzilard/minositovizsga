@@ -1,4 +1,3 @@
-/*
 package passwords;
 
 import org.junit.jupiter.api.Test;
@@ -11,11 +10,11 @@ class PasswordOperationsTest {
 
     @Test
     void testCheckPasswordStrengthWeekPassword() {
-        assertEquals(PasswordStrength.WEEK, passwordOperations.checkPasswordStrength("almafa"));
-        assertEquals(PasswordStrength.WEEK, passwordOperations.checkPasswordStrength("189726"));
-        assertEquals(PasswordStrength.WEEK, passwordOperations.checkPasswordStrength("AlmAfa"));
-        assertEquals(PasswordStrength.WEEK, passwordOperations.checkPasswordStrength("A"));
-        assertEquals(PasswordStrength.WEEK, passwordOperations.checkPasswordStrength("1"));
+        assertEquals(PasswordStrength.WEAK, passwordOperations.checkPasswordStrength("almafa"));
+        assertEquals(PasswordStrength.WEAK, passwordOperations.checkPasswordStrength("189726"));
+        assertEquals(PasswordStrength.WEAK, passwordOperations.checkPasswordStrength("AlmAfa"));
+        assertEquals(PasswordStrength.WEAK, passwordOperations.checkPasswordStrength("A"));
+        assertEquals(PasswordStrength.WEAK, passwordOperations.checkPasswordStrength("1"));
     }
 
     @Test
@@ -35,4 +34,4 @@ class PasswordOperationsTest {
         assertEquals(PasswordStrength.STRONG, passwordOperations.checkPasswordStrength("1A2345"));
     }
 
-}*/
+}
