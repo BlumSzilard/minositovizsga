@@ -37,5 +37,10 @@ public class LoanRepository {
         }, id);
     }
 
+    public void updateDebtWithInterest(){
+        String sql = "UPDATE loans SET debt = debt + debt * interest / 100";
+        jdbcTemplate.update(sql);
+    }
+
 
 }
